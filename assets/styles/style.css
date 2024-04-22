@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-head {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.vert-form {
+  width: 400px;
+  margin: 0 auto;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    margin: 5px 0;
+    padding: 5px 5px;
+  }
+  input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+}
+
+#otpcon {
+  display: flex;
+  flex-direction: column;
+}
+
+#getotpcon {
+  display: flex;
+  justify-content: center;
+}
+
+.options {
+  margin: 10px 0;
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+  }
+}
+
+.center{
+  padding-top: 10px;
+  text-align: center;
+}
+
+#linkedin {
+  padding: 10px 30px;
+  background-color: rgb(15, 85, 226);
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+#register {
+  height: 600px;
+  row-gap: 30px;
+}

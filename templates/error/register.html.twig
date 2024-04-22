@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Sign-Up!
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{asset('styles/style.css')}}" type="text/css">
+{% endblock %} 
+
+{% block body %}
+  <div class="container">
+    <div class="flex-center col" id="register">
+        {% if not valid_input %}
+          <h2>Please fill all fields correctly!</h2>
+        {% endif %}
+        <h3 id="response"></h3>
+        <h4>{{message}}</h4>
+        <a href="/register">Go Back</a>
+      </div>
+		</div>
+  </div>
+{% endblock %}

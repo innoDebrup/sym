@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Sign-Up!
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{asset('styles/style.css')}}" type="text/css">
+{% endblock %} 
+
+{% block js %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="{{asset('js/script.js')}}"></script>
+{% endblock %}
+
+{% block body %} 
+<div class="container">
+	<div>
+		<div class="main-head">
+			<h1>
+				Sign Up Now!
+			</h1>
+		</div>
+		<div class="vert-form">
+			<form name="sign_up" method="post">
+				<label for="user_name">Username</label>
+				<input type="text" name="user_name">
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email">
+				<label for="password">Password</label>
+				<input type="password" name="password">
+				<div id="otpcon">
+					<label for="otp">Email OTP</label>
+					<input type="text" name='otp' id="otp">
+				</div>
+				<div id="getotpcon">
+					<input type="button" value="Get OTP" id="check">
+				</div>
+				<div id="message"></div>
+				<div class="options">
+					<ul>
+						<li><a href="/login">Go Back to Login</a></li>
+					</ul>
+				</div>
+
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+
+</div>
+{% endblock %}
