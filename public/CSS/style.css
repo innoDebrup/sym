@@ -39,6 +39,10 @@
   flex-direction: column;
 }
 
+.hidden {
+  display: none;
+}
+
 #getotpcon {
   display: flex;
   justify-content: center;
@@ -81,4 +85,10 @@
 #register {
   height: 600px;
   row-gap: 30px;
+}
+
+#message,.messages {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }

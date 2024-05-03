@@ -1,5 +1,5 @@
 <?php
-namespace App\Core\Env;
+namespace App\Services\Env;
 
 use Dotenv\Dotenv;
 /**

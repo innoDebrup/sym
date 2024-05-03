@@ -1,8 +1,8 @@
 <?php
-namespace App\Core;
+namespace App\Services;
 
 use PHPMailer\PHPMailer\PHPMailer;
-use App\Core\Env\LoadEnv;
+use App\Services\Env\LoadEnv;
 
 class SendMail {
   private $content;
@@ -54,7 +54,7 @@ class SendMail {
     $mail = $this->mail;
     $mail->addAddress($email);
     $mail->Subject = ("Reset Your Password !!");
-    $mail->Body = "Click this <a href='$this->content'>link</a> to reset the password.";
+    $mail->Body = "<h1>Reset Password Link</h1><p>Click this <a href='$this->content'>link</a> to reset the password.</p>";
     $mail->send();
   }
   /**

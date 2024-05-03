@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-  Sign-Up!
+  Forgot Password!
 {% endblock %}
 
 {% block stylesheets %}
@@ -11,12 +11,8 @@
 {% block body %}
   <div class="container">
     <div class="flex-center col" id="register">
-        {% if not valid_input %}
-          <h2>Please fill all fields correctly!</h2>
-        {% endif %}
-        <h3 id="response"></h3>
-        <h4>{{message}}</h4>
-        <a href="/register">Go Back</a>
+        <h1>{{message}}</h1>
+        <a href="/login">Go Back to Login</a>
       </div>
 		</div>
   </div>

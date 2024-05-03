@@ -1,0 +1,31 @@
+{% for post in posts %}
+	<div class="post-container post-row">
+		<div class="posted-by">
+			<h5 class="uname">{{post.user.username}}</h5>
+		</div>
+		<div class="post">
+			<p>{{post.content}}</p>
+      <div class="media">
+			{% if post.mediatype matches '/video*/'%}
+        <video controls>
+          <source src="{{asset(post.media)}}" type="{{post.mediatype}}">
+        </video>
+      {% elseif post.mediatype matches '/images*/' %}
+				  <img src="{{asset(post.media)}}" alt="Image">
+			{% endif %}
+      </div>
+		</div>
+		<div id="like-con" data-post-id="{{post.id}}">
+			<div id="thumbs">
+				{% if liked[loop.index0] %}
+				  <i class="fa-solid fa-thumbs-up"></i>
+				{% else %}
+					<i class="uil uil-thumbs-up"></i>
+        {% endif %}
+			</div>
+			<div id="like-count">
+				{{post.likes.count}}
+			</div>
+		</div>
+	</div>
+{% endfor %}
