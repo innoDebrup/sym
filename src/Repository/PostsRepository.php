@@ -15,11 +15,26 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Posts[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class PostsRepository extends ServiceEntityRepository {
+  /**
+   * Constructor to initialize the object.
+   *
+   * @param ManagerRegistry $registry
+   *   ManagerRegistery containing object manager for the entity class.
+   */
   public function __construct(ManagerRegistry $registry) {
     parent::__construct($registry, Posts::class);
   }
 
-  public function findLimitedEntities($limit, $offset)
+  /**
+   * Find entities based on the limit and offset passed.
+   *
+   * @param int $limit
+   * @param int $offset
+   * 
+   * @return Doctrine\ORM\EntityRepository
+   *  Return Repository of objects according to the query executed. 
+   */
+  public function findLimitedEntities(int $limit, int $offset)
   {
     return $this->createQueryBuilder('e')
       ->orderBy('e.id', 'DESC')
