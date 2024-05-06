@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{asset('CSS/home.css')}}" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- Unicons CSS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+{% endblock %} 
+
+{% block js %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="{{asset('JS/home.js')}}"></script>
+{% endblock %}
+
+{% block body %} 
+<nav class="nav">
+    <i class="uil uil-bars navOpenBtn"></i>
+    <a href="#" class="logo">Great App</a>
+    <div class="nav-links">
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
+    </div>
+    <div class="nav-links">
+      <div><a href="/home">{{user_name}}</a></div>
+      <div><a href="/logout">Logout</a></div>
+    </div>
+  </nav>
+  <div class="post-container">
+    <h2>Create a Post</h2>
+    <form id="post-form" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="content">Write something:</label>
+        <textarea id="post-text" name="content" rows="4" cols="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="media">Upload media:</label>
+        <input type="file" id="post-media" name="media">
+      </div>
+      <div id = 'post-error'></div>
+      <button type="submit">Post</button>
+    </form>
+  </div>
+  <div>
+    <form>
+      <input type="text" name="hiddenid" value="{{user_name}}" id="user-name" hidden>
+    </form>
+  </div>
+  <div class="container">
+    <h2 id="top-posts-header">Recent Posts</h2>
+    <div class="posts-display">
+      <div id="default"></div>
+      <div id="loaded-content"></div>
+      <div id="load-message"></div>
+      <div class="btn-con">
+        <button id="more">See more</button>
+      </div>
+    </div>
+  </div>
+  <div id="debug"></div>
+{% endblock %}

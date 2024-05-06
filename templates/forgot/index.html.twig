@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-  Sign-Up!
+  Forgot Password !
 {% endblock %}
 
 {% block stylesheets %}
@@ -18,31 +18,18 @@
 	<div>
 		<div class="main-head">
 			<h1>
-				Sign Up Now!
+				Forgot Password!
 			</h1>
 		</div>
 		<div class="vert-form">
-			<form name="sign_up" method="post">
-				<label for="user_name">Username</label>
-				<input type="text" name="user_name">
+			<form name="forgot_pass" method="post">
 				<label for="email">Email</label>
-				<input type="text" name="email" id="email">
-				<label for="password">Password</label>
-				<input type="password" name="password">
-				<div class="hidden">
-					<label for="otp">Email OTP</label>
-					<input type="text" name='otp' id="otp">
-				</div>
-				<div id="getotpcon">
-					<input type="button" value="Get OTP" id="check">
-				</div>
-				<div id="message"></div>
+				<input type="email" name="email">
 				<div class="options">
 					<ul>
 						<li><a href="/login">Go Back to Login</a></li>
 					</ul>
 				</div>
-
 				<input type="submit" value="Submit">
 			</form>
 		</div>

@@ -1,7 +1,7 @@
 <?php
-namespace App\Core;
+namespace App\Services;
 
-use App\Core\Env\LoadEnv;
+use App\Services\Env\LoadEnv;
 /**
  * Class for performing various Validations.
  */

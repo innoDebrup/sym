@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-  Login!
+  Reset Password !
 {% endblock %}
 
 {% block stylesheets %}
@@ -15,29 +15,16 @@
 
 {% block body %} 
 <div class="container">
-  {% if message %}
-    <div class="flex-center messages">
-      <h2>{{message}}</h2>
-    </div>
-  {% endif %}
 	<div>
 		<div class="main-head">
 			<h1>
-				Login!
+				Reset Password!
 			</h1>
 		</div>
 		<div class="vert-form">
-			<form name="log_in" method="post">
-				<label for="user_mail">Username/Email</label>
-				<input type="text" name="user_mail">
-				<label for="password">Password</label>
-				<input type="password" name="password">
-				<div class="options">
-					<ul>
-						<li><a href="/register">Create an account!</a></li>
-						<li><a href="/forgot">Forgot Password!</a></li>
-					</ul>
-				</div>
+			<form name="reset_pass" method="post">
+				<label for="password">New Password</label>
+				<input type="text" name="password">
 				<input type="submit" value="Submit">
 			</form>
 		</div>
